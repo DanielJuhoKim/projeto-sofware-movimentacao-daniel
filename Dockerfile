@@ -1,5 +1,5 @@
 FROM python
 
-COPY * /
+COPY . .
 
-ENTRYPOINT ["python", "-py", "/app.py"]
+ENTRYPOINT ["python", "/app.py"]
