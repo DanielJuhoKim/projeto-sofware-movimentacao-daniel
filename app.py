@@ -27,7 +27,6 @@ def criar_movimentacao():
     movimentacoes.append(movimentacao)
     return jsonify(movimentacao), 201
 
-
 @app.route("/movimentacoes", methods=["GET"])
 def listar_movimentacoes():
     return jsonify(movimentacoes)
