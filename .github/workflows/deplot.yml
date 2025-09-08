@@ -46,6 +46,6 @@ jobs:
         key: ${{ secrets.KEY_TEST }}
         port: 22
         script: |
-          docker stop stocks
-          docker rm --force stocks
-          docker run -d -p 8080:8080 --name stocks danieljuhokim/docker_movimentacao_test:${{ github.sha }}
+          docker stop app_python_movimentacoes
+          docker rm --force app_python_movimentacoes
+          docker run -d -p 8081:5000 --name app_python_movimentacoes danieljuhokim/docker_movimentacao_test:${{ github.sha }}
